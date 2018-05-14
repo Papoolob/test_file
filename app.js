@@ -115,7 +115,7 @@ bot.dialog('/',function (session) {
     
     
 
-    var n;
+    
     var req = session.message.text;
     // session.send(req);
     var resKey = null;
@@ -128,7 +128,7 @@ bot.dialog('/',function (session) {
         var regex = new RegExp(key);
         if(req.match(regex)){
             resKey = key; 
-            n=i;
+            
             break;
         }
         
@@ -139,8 +139,8 @@ bot.dialog('/',function (session) {
         ref.on("value", function (snapshot) {
             var dddd  = snapshot.val();
             
-            session.send(n);
-            //session.send(dddd[n].link);
+            
+            session.send(dddd[0].link);
         
             if(data1[resKey]==dddd[10].key){
                 session.send(s+dddd[10].link);
