@@ -139,6 +139,7 @@ bot.dialog('/',function (session) {
             var dddd  = snapshot.val();
             
             session.send(dddd[0].link);
+            session.send(dddd[0]);
         
             if(data1[resKey]==dddd[10].key){
                 session.send(s+dddd[10].link);
