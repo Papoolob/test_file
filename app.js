@@ -115,12 +115,13 @@ bot.dialog('/',function (session) {
     
     
 
+    var n;
     var req = session.message.text;
     // session.send(req);
     var resKey = null;
     var keys = Object.keys(data1);
     for(var i=0; i<keys.length; i++){
-        
+        n=i;
         var key = keys[i];
         // session.send(key);
         // session.send("-------------------------------------------------");
@@ -137,8 +138,8 @@ bot.dialog('/',function (session) {
         ref.on("value", function (snapshot) {
             var dddd  = snapshot.val();
             
-            session.send("test");
-            session.send(dddd[2].link);
+            
+            session.send(dddd[n].link);
         
             if(data1[resKey]==dddd[10].key){
                 session.send(s+dddd[10].link);
