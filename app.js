@@ -6,7 +6,6 @@
 // var server = restify.createServer();
 // server.listen(process.env.port || process.env.PORT || 3978, function(){
 //     console.log('%s listening to %s', server.name, server.url);
-// });
 
 // // Setup Bot
 // var connector = new builder.ChatConnector({
@@ -139,7 +138,7 @@ bot.dialog('/',function (session) {
             var dddd  = snapshot.val();
             
             session.send("test");
-            session.send(dddd);
+            session.send(dddd[2].link);
         
             if(data1[resKey]==dddd[10].key){
                 session.send(s+dddd[10].link);
